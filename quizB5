@@ -1,0 +1,8 @@
+From scipy.interpolate import interp1d
+
+# Spline interpolation
+Spline = interp1d(x_data, y_data, kind=’linear’)
+
+# Interpolated value at x=4.0
+Y_interp = spline(4.0)
+Print(f”Interpolated y value at x=4.0: {y_interp}”)
