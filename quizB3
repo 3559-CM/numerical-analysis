@@ -1,0 +1,22 @@
+Import numpy as np
+Import scipy.optimize as opt
+Import matplotlib.pyplot as plt
+
+# Example data
+X_data = np.array([2.00, 4.25, 5.25, 7.81, 9.20, 10.60])
+Y_data = np.array([7.2, 7.1, 6.0, 5.0, 3.5, 5.0])
+
+# Define the model function
+Def model(x, a, b, c):
+    Return a * x**2 + b * x + c
+
+# Fit the model to the data
+Params, params_covariance = opt.curve_fit(model, x_data, y_data)
+
+Print(f”Fitted parameters: {params}”)
+
+# Plotting
+Plt.scatter(x_data, y_data, label=’Data’)
+Plt.plot(x_data, model(x_data, *params), label=’Fitted function’, color=’red’)
+Plt.legend()
+Plt.show()
