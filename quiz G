@@ -1,0 +1,13 @@
+def trapezoidal_rule(f, a, b, n):
+    h = (b – a) / n
+    integral = (f(a) + f(b)) / 2.0
+    for I in range(1, n):
+        integral += f(a + I * h)
+    integral *= h
+    return integral
+
+def f(x):
+    return x**2 – x – 2
+
+result = trapezoidal_rule(f, 1, 3, 10)
+print(f”Trapezoidal rule result: {result}”)
