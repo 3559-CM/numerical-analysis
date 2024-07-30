@@ -1,0 +1,6 @@
+Import sympy as sp
+
+X = sp.symbols(‘x’)
+F = x**2 – x – 2
+F_prime = sp.diff(f, x)
+Print(f”f’(x) = {f_prime}”)
